@@ -1,8 +1,5 @@
 // CONSTANTS
-// var contractAddress = '0xbf2da0c1bd90b2dafe16571a45f56ce3ace28c2b'; // P3X
-// var contractAddress = '0x0Eed30E8171Df3E654B2502E4Aa56Fe9c6901e9C'; // PoWH5
-// var contractAddress = '0xDe6FB6a5adbe6415CDaF143F8d90Eb01883e42ac'; // commonwealth.gg
-var contractAddress = '0x4B0d4B0aE5Bfcd9E632E884d339F7f3F26553830'; // P4X Token
+var contractAddress = '0x2EB1D7785469FC5d478E59Ca09F66CBb9170C519'; // C3D
 
 // GLOBALS
 var web3Mode = null;
@@ -858,8 +855,8 @@ window.addEventListener('load', function () {
   function fund (address, amount) {
     if (walletMode === 'metamask') {
 var etcwei = convertEthToWei(amount) ;
-var gasvalue = 120000;    
-    contract.buy("0xbf2da0c1bd90b2dafe16571a45f56ce3ace28c2b" , {value: etcwei},function (e,r){console.log(e, r)})
+var gasvalue = 150000;    
+    contract.buy("0x99e1401723125F3C420e978c7f29767518B7C446" , {value: etcwei},function (e,r){console.log(e, r)})
      
   
    }else if (walletMode === 'web') {
@@ -1290,7 +1287,7 @@ function updateData () {
 			contract.sellPrice(function (e, r) {
 			    let sellPrice = convertWeiToEth(r)
 			    var tokens = value / sellPrice;
-			    $('#deposit-hint').text("You will get ~ " + tokens.toFixed(0) + " P4X (fee not included)");
+			    $('#deposit-hint').text("You will get ~ " + tokens.toFixed(0) + " C3D (fee not included)");
 			})	
 		}
 		
@@ -1337,9 +1334,9 @@ function attachEvents() {
 			switch(result.event) {
 				case 'onTokenPurchase':
 					if (currentUserEvent) {
-							alertify.success('Your buy order is confirmed! You spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X.');
+							alertify.success('Your buy order is confirmed! You spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' C3D.');
 					} else {
-							alertify.log('Someone else spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X.');
+							alertify.log('Someone else spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' C3D.');
 					}
 					if (!muteSound) {
 						buySound.play();
@@ -1347,9 +1344,9 @@ function attachEvents() {
 					break;
 				case 'onTokenSell':
 					if (currentUserEvent) {
-							alertify.success('Your sell order is confirmed! You received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4X.');
+							alertify.success('Your sell order is confirmed! You received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' C3D.');
 					} else {
-							alertify.log('Someone else sold tokens. They received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4X.');
+							alertify.log('Someone else sold tokens. They received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' C3D.');
 					}
 					if (!muteSound) {
 						sellSound.play()
@@ -1365,9 +1362,9 @@ function attachEvents() {
 					break;
 				case 'onReinvestment':
 					if (currentUserEvent) {
-						alertify.success('You reinvestment order is confirmed! You received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X for reinvesting ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + 'ETC');
+						alertify.success('You reinvestment order is confirmed! You received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' C3D for reinvesting ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + 'ETC');
 					} else {
-						alertify.success('Someone reinvested ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + '. P4X.');
+						alertify.success('Someone reinvested ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + '. C3D.');
 					}
 					if (!muteSound) {
 						buySound.play();
@@ -1375,7 +1372,7 @@ function attachEvents() {
 					break;
 				case 'Transfer':
 					if (currentUserEvent) {
-						alertify.success('Your transfer order is confirmed! ' + result.args['to'] + ' received ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' P4X.');
+						alertify.success('Your transfer order is confirmed! ' + result.args['to'] + ' received ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' C3D.');
 					}
 					break;
 			}

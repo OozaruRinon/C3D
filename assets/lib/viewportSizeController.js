@@ -26,20 +26,4 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				target: $body,
-				visibleClass: 'is-menu-visible',
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right'
-			});
-
 })(jQuery);
