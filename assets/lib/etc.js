@@ -1337,9 +1337,9 @@ function attachEvents() {
 			switch(result.event) {
 				case 'onTokenPurchase':
 					if (currentUserEvent) {
-							alertify.success('Your buy order is confirmed! You spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4C.');
+							alertify.success('Your buy order is confirmed! You spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X.');
 					} else {
-							alertify.log('Someone else spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4C.');
+							alertify.log('Someone else spent ' + result.args.incomingEthereum.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X.');
 					}
 					if (!muteSound) {
 						buySound.play();
@@ -1347,9 +1347,9 @@ function attachEvents() {
 					break;
 				case 'onTokenSell':
 					if (currentUserEvent) {
-							alertify.success('Your sell order is confirmed! You received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4C.');
+							alertify.success('Your sell order is confirmed! You received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4X.');
 					} else {
-							alertify.log('Someone else sold tokens. They received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4C.');
+							alertify.log('Someone else sold tokens. They received ' + result.args['ethereumEarned'].div(1000000000000000000).toFixed(4) + ' ETC for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' P4X.');
 					}
 					if (!muteSound) {
 						sellSound.play()
@@ -1365,9 +1365,9 @@ function attachEvents() {
 					break;
 				case 'onReinvestment':
 					if (currentUserEvent) {
-						alertify.success('You reinvestment order is confirmed! You received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4C for reinvesting ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + 'ETC');
+						alertify.success('You reinvestment order is confirmed! You received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' P4X for reinvesting ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + 'ETC');
 					} else {
-						alertify.success('Someone reinvested ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + '. P4C.');
+						alertify.success('Someone reinvested ' + result.args.ethereumReinvested.div(1000000000000000000).toFixed(4) + ' ETC and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + '. P4X.');
 					}
 					if (!muteSound) {
 						buySound.play();
@@ -1375,7 +1375,7 @@ function attachEvents() {
 					break;
 				case 'Transfer':
 					if (currentUserEvent) {
-						alertify.success('Your transfer order is confirmed! ' + result.args['to'] + ' received ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' P4C.');
+						alertify.success('Your transfer order is confirmed! ' + result.args['to'] + ' received ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' P4X.');
 					}
 					break;
 			}
