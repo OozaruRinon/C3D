@@ -27,3 +27,7 @@
 			}, 100);
 		});
 })(jQuery);
+
+particlesJS.load('particles-js', 'assets/config/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
