@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="assets/css/professional_style.css" />
         <link rel="stylesheet" href="assets/css/themes/default.min.css" />
         
-        <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://bootswatch.com/4/materia/bootstrap.min.css" rel="stylesheet" />
     
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
         <script src="assets/js/modernizr.min.js"></script>
@@ -29,11 +29,11 @@
         </script>
     </head>
     
-    <body class="is-preload">
+    <body class="is-preload bg-dark">
         <div id="particles-js"></div>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="index.html"><img src="./assets/img/coinsmall.png" width="30px" height="30px"> C3D Network</a>
+            <a class="navbar-brand" href="index.html"><img src="./assets/img/coinsmall.png" width="40px" height="40px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="info.html">How to Play</a></li>
+                    <li class="nav-item"><a class="nav-link" href="info.html">Help</a></li>
                 </ul>
                 
                 <ul class="navbar-nav ml-auto">
@@ -50,6 +50,7 @@
                 </ul>
             </div>
         </nav>
+        <br />
         <br />
         <br />
         <br />
@@ -74,7 +75,7 @@
             
             <div class="row exchange">
                 <div class="col-md-6">
-                    <div class="card border-danger animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
+                    <div class="card border-white animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
                         <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">My Wallet</div>
                         <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="container">
@@ -100,9 +101,9 @@
                         </div>
                         <div class="card-footer text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="row">
-                                <div class="col"><button class="btn btn-block btn-sm btn-dark btn-outline-primary text-white" data-toggle="modal" data-target="#buyModal">Buy</button></div>
-                                <div class="col"><button class="btn btn-block btn-sm btn-dark btn-outline-danger text-white" data-toggle="modal" data-target="#sellModal">Sell</button></div>
-                                <div class="col"><button class="btn btn-block btn-sm btn-dark btn-outline-dark text-white" data-toggle="modal" data-target="#transferModal">Transfer</button></div>
+                                <div class="col"><button class="btn btn-block btn-sm btn-success btn-outline-primary text-white" data-toggle="modal" data-target="#buyModal">Buy</button></div>
+                                <div class="col"><button class="btn btn-block btn-sm btn-danger btn-outline-danger text-white" data-toggle="modal" data-target="#sellModal">Sell</button></div>
+                                <div class="col"><button class="btn btn-block btn-sm btn-warning btn-outline-dark text-white" data-toggle="modal" data-target="#transferModal">Transfer</button></div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +111,7 @@
                 </div>
                 
                 <div class="col-md-6">
-                    <div class="card border-danger animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
+                    <div class="card border-white animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
                         <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">My Earnings</div>
                         <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="container">
@@ -137,11 +138,11 @@
                         <div class="card-footer text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="row">
                                 <div class="col">
-                                    <button id="withdraw-btn" class="btn btn-block btn-sm btn-dark btn-outline-primary text-white" type="button">Withdraw dividends</button>
+                                    <button id="withdraw-btn" class="btn btn-block btn-sm btn-primary btn-outline-primary text-white" type="button">Withdraw dividends</button>
                                 </div>
                                 
                                 <div class="col">
-                                    <button id="reinvest-btn" class="btn btn-block btn-sm btn-dark btn-outline-warning text-white" type="button">Reinvest dividends</button>
+                                    <button id="reinvest-btn" class="btn btn-block btn-sm btn-info btn-outline-warning text-white" type="button">Reinvest dividends</button>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +193,7 @@
             
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card border-primary animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
+                    <div class="card border-white animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
                         <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">HODL Dividends</div>
                         <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="container">
@@ -221,7 +222,7 @@
                 </div>
                 
                 <div class="col-md-6">
-                    <div class="card border-primary animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
+                    <div class="card border-white animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
                         <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">Referral Dividends</div>
                         <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="container">
@@ -287,13 +288,13 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    <div class="modal-header">
+                    <div class="modal-header bg-dark text-white">
                         <h4 class="modal-title">Buy C3D</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
-                    <div class="modal-body exchange">
+                    <div class="modal-body exchange bg-dark text-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center">
@@ -316,14 +317,14 @@
                         </div>
                             
                         <div class="form-group">
-                            <input id="purchase-amount" class="form-control input-lg" type="text" placeholder="Amount of ETC.."/>
+                            <input id="purchase-amount" class="form-control input-lg text-white" type="text" placeholder="Amount of ETC.."/>
                         </div>
                         <p id="deposit-hint"></p>
-                        <button id="buy-tokens" class="btn btn-block btn-dark btn-outline-success text-white" type="button">Buy C3D</button>
+                        <button id="buy-tokens" class="btn btn-block btn-success text-white" type="button">Buy C3D</button>
                     </div>
 
                     <!-- Modal footer -->
-                    <div class="modal-footer">
+                    <div class="modal-footer bg-dark text-white">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -336,13 +337,13 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    <div class="modal-header">
+                    <div class="modal-header bg-dark text-white">
                         <h4 class="modal-title">Sell C3D</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
-                    <div class="modal-body">
+                    <div class="modal-body bg-dark text-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center">
@@ -365,13 +366,13 @@
                         </div>
                         
                         <div class="form-group">
-                            <input id="sell-tokens-amount" class="form-control input-lg" type="text" placeholder="How much C3D.."/>
+                            <input id="sell-tokens-amount" class="form-control input-lg text-white" type="text" placeholder="How much C3D.."/>
                         </div>
-                        <button id="sell-tokens-btn" class="btn btn-block btn-dark btn-outline-danger text-white" type="button">Sell C3D</button>
+                        <button id="sell-tokens-btn" class="btn btn-block btn-danger text-white" type="button">Sell C3D</button>
                     </div>
 
                     <!-- Modal footer -->
-                    <div class="modal-footer">
+                    <div class="modal-footer bg-dark text-white">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -384,19 +385,19 @@
                 <div class="modal-content">
 
                     <!-- Modal Header -->
-                    <div class="modal-header">
+                    <div class="modal-header bg-dark text-white">
                         <h4 class="modal-title">Transfer C3D</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
                     <!-- Modal body -->
-                    <div class="modal-body">
+                    <div class="modal-body bg-dark text-white">
                         <div class="container">
                             <div class="row">
                                 <div class="col text-center">
-                                    <input id="transfer-address" class="form-control input-lg" type="text" placeholder="Address of the recipient (wallet)"/><br />
-                                    <input id="transfer-tokens" class="form-control input-lg" type="text" placeholder="Amount of C3D"/><br />
-                                    <button id="transfer-tokens-btn" class="btn btn-block btn-sm btn-dark btn-outline-warning text-white" type="button">Send Tokens</button>
+                                    <input id="transfer-address" class="form-control input-lg text-white" type="text" placeholder="Address of the recipient (wallet)"/><br />
+                                    <input id="transfer-tokens" class="form-control input-lg text-white" type="text" placeholder="Amount of C3D"/><br />
+                                    <button id="transfer-tokens-btn" class="btn btn-block btn-sm btn-warning text-white" type="button">Send Tokens</button>
                                     <p class="transfer-hint">When making transfers, Dividends are automatically sent to your account</p>
                                 </div>
                             </div>
@@ -404,7 +405,7 @@
                     </div>
 
                     <!-- Modal footer -->
-                    <div class="modal-footer">
+                    <div class="modal-footer bg-dark text-white">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
