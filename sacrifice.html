@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="icon" type="image/png" href="assets/img/etherum.png">
+        <title>C3D Network</title>
+
+        <link rel="stylesheet" href="assets/css/alertify.min.css" />
+        
+        <link rel="stylesheet" href="assets/css/animate.css" />
+        <link rel="stylesheet" href="assets/css/scrollFix.css" />
+        <link rel="stylesheet" href="assets/css/professional_style.css" />
+        <link rel="stylesheet" href="assets/css/themes/default.min.css" />
+        
+        <link href="https://bootswatch.com/4/materia/bootstrap.min.css" rel="stylesheet" />
+    
+        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+        <script src="assets/js/modernizr.min.js"></script>
+        
+        <script>
+            function whenAvailable(name, callback) {
+                var interval = 10;
+                window.setTimeout(function() {
+                    if (window[name]) {callback(window[name]);} else {window.setTimeout(arguments.callee, interval);}
+                }, interval);
+            }
+        </script>
+    </head>
+    
+    <body class="is-preload bg-dark">
+        <div id="particles-js"></div>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="index.html"><img src="./assets/img/coinsmall.png" width="30px" height="30px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sacrifice.html">Sacrifice</a></li>
+                </ul>
+                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="dapps.html">More Dapps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://classic.etccoopexplorer.com/address/0x2EB1D7785469FC5d478E59Ca09F66CBb9170C519/transactions" target="_blank">Contract</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/C3DNetwork/C3D" target="_blank">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
+        <div class="container">
+            <div class="row jumbotron border-white text-white animated fadeInDown" style="background: rgba(0, 0, 0, 0.65);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="text-white">C3D Network</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white">Decentralised Passive Income</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 animated fadeInLeft delay-1s">
+                    <div class="card border-success animated fadeInLeft delay-2s">
+                    <div class="card-header bg-dark text-white">Enter the Pot</div>
+                    
+                    <div class="card-body bg-dark text-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="text-white text-center"><span id="stage"></span></h3><br />
+                                    <p id="status" style="text-align:center"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button type="button" id="small" onclick="small()" disabled="true" class="btn btn-block btn-outline-success" role="button">0.1 ETC</button><br />
+                                </div>
+                                
+                                <div class="col text-center">
+                                    <button type="button" id="medium" onclick="medium()" disabled="true" class="btn btn-block btn-outline-success" role="button">0.5 ETC</button><br />
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-block btn-success" id="offer" onclick="offer()" disabled="true">
+                                        Buy Entry
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" id="offervault" onclick="offervault()" disabled="true" class="btn btn-block btn-success" role="button" style="margin-bottom: 10px;"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-dark text-white">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-center"><span id="vault"></span></p>
+                                <button type="button" id="withdrawArenaDivs" onclick="withdrawArenaDivs()" disabled="true" class="btn btn-block btn-danger" role="button" style="margin-bottom: 10px;"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                    
+                </div>
+                
+                <div class="col-md-6 animated fadeInRight delay-1s">
+                    <div class="card border-primary animated fadeInUp delay-3s">
+                        <div class="card-header bg-dark text-white">Current Game</div>
+                        <div class="card-body bg-dark text-white text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="text-white text-center bg-dark border-warning text-white">Locked Up<br /><span id="p3c" class="text-success"></span></h5>
+                                </div>
+                                
+                                <div class="col">
+                                    <h5 class="text-white text-center">Dividends<br /><span id="sac" class="text-success"></span></h5>
+                                </div>
+                            </div>
+                            
+                            <span id="playersize"></span>, <span id="offersize" class="text-white"></span><br />
+                    <br />
+                    <span id="winnings"></span><br />
+                    <br />
+                            <p id="players" style="text-align:center"></p>
+                            <p class="text-center text-success">Your Address: <b><span id="playeraddress"></span></b></p>  
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            
+            <div class="row jumbotron bg-dark text-white animated fadeInUp delay-3s" id="history"></div>
+                    
+            <button type="button" id="validate" onclick="validate()" hidden="true" class="btn btn-success" role="button" style="display: block; margin: 0 auto; margin-bottom: 10px;"></button>
+            
+            <footer class="container jumbotron py-5" style="background: rgba(0, 0, 0, 0.65);">
+                <div class="row">
+                    <div class="col-12 col-md text-center">
+                        <p class="d-block mb-3 text-white text-center">
+                            C3D, both in Smart Contract and Dapp / website / interface form, is <b class="text-danger">experimental technology</b>.<br />
+                            As such, there is <b class="text-danger">no guarantee</b> of profit or return as a result of using or activating any part of it. You should only use funds that you can afford to lose.<br />
+                            The developer of this game kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        
+            
+            <!-- Bottom Nav -->
+            <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"></a>
+            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
+                <ul class="navbar-nav mr-auto">
+                    <div id="current"></div>
+                </ul>
+          
+                <ul class="navbar-nav ml-auto">
+                    
+                </ul>
+            </div>
+        </nav>
+        </div>
+        
+        <div class="modal" id="statsModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-primary text-white">
+                        <h4 class="modal-title text-white">GAME STATS</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body bg-primary text-white">
+                        <h3 class="text-white text-center"><span id="stage"></span></h3>
+                        <h3 class="text-white text-center"><span id="p3c"></span></h3>
+                        <h3 class="text-white text-center"><span id="sac"></span></h3>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer bg-primary text-white">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="infoModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-primary text-white">
+                        <h4 class="modal-title text-white">GAME RULES</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body bg-primary text-white text-center">
+                        <span id="playersize"></span>, <span id="offersize" class="text-white"></span><br /><br />
+                        Only <span id="winnings"></span><br />
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer bg-primary text-white">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <!-- Scripts -->
+    <!-- Bootstrap 4 and dependencies -->
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- Site-Specific dependencies -->
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/lib/customToolkit.js"></script>
+    <script src="assets/lib/viewportSizeController.js"></script>
+
+    <!-- Dapp/Game Scripts -->
+    <script type="text/javascript" src="assets/js/web3.js"></script>
+    <script type="text/javascript" src="assets/js/alertify.js"></script>
+    <script type="text/javascript" src="assets/js/lightwallet.min.js"></script>
+    <script type="text/javascript" src="assets/lib/C3D_Token.etc.js"></script>
+    <script type="text/javascript" src="assets/lib/arena.js"></script>
+</html>

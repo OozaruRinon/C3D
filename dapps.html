@@ -13,8 +13,12 @@
         <link rel="stylesheet" href="assets/css/scrollFix.css" />
         <link rel="stylesheet" href="assets/css/professional_style.css" />
         <link rel="stylesheet" href="assets/css/themes/default.min.css" />
-        
+
         <link href="https://bootswatch.com/4/materia/bootstrap.min.css" rel="stylesheet" />
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+        <link rel="stylesheet" href="assets/css/dataTables/rowReorder.dataTables.min.css" />
     
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
         <script src="assets/js/modernizr.min.js"></script>
@@ -77,66 +81,23 @@
             </div>
             
             <div class="row">
-                <div class="col-md-6 animated fadeInLeft delay-1s">
-                    <a class="btn btn-block btn-lg btn-success text-white" href="dashboard.html">Go to Dashboard</a><br />
-                </div>
-                
-                <div class="col-md-6 animated fadeInRight delay-1s">
-                    <a class="btn btn-block btn-lg btn-info text-white" href="help.html">How to Get Started</a><br />
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-6 text-center animated fadeInLeft delay-1s">
-                    <div class="card border-white rcAll" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-header text-white text-left rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>Welcome</small>
-                        </div>
-                        
-                        <div class="card-body text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">
-                            <p>
-                                Welcome to C3D, the Decentralised Passive Income Platform. This website serves as the official Dapp interface for the C3D Token Smart Contract, which is deployed on the Ethereum Classic Mainnet. <br />
-                            <br />C3D is based on the works of several &quot;Proof-of-Weak-Hands&quot; (PoWH) games and systems - while these systems are known to work well, this is just as risky as any cryptocurrency investment - so please be careful!
-                            </p>
-                        </div>
-                        
-                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            
-                        </div>
-                    </div>
-                    <br />
-                    
-                </div>
-                
-                <div class="col-md-6 text-center animated fadeInRight delay-1s">
-                    <div class="card border-white rcAll" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-body text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">
-                            <h3 class="text-white text-left">Stats</h3>
-                            <table class="table table-hover text-white">
-                                <tr>
-                                    <td><img src="assets/img/coinsmall.png" width="20px" height="20px" /></td>
-                                    <td><b>Current Supply</b></td>
-                                    <td><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> C3D</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td><img src="assets/img/etcsmall.png" width="20px" height="20px" /></td>
-                                    <td><b>Contract Holdings</b></td>
-                                    <td><span class="contract-balance"><img src="./assets/img/loader.svg"></span> ETC</td>
-                                </tr>
-                        
-                                <tr>
-                                    <td><img src="assets/img/dollarsmall.png" width="20px" height="20px" /></td>
-                                    <td><b>C3D Market Cap</b></td>
-                                    <td><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            
-                        </div>
-                    </div>
+                <div class="col-md-12">
+                    <table id="dapps" class="display nowrap bg-light" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Users (72Hr)</th>
+                            <th>Tx (72Hr)</th>
+                            <th>Dapp</th>
+                            <th>Locked (ETC)</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Volume (72Hr)</th>
+                            <th>Help</th>
+                            <th>Smart Contract</th>
+                            <th><img src="assets/img/callisto-small.png" style="height: 45px;" class="ui mini image" /></th>
+                        </tr>
+                    </thead>
+                </table>
                 </div>
             </div>
             <br />
@@ -171,6 +132,9 @@
     </body>
     
     <!-- Scripts -->
+    <!-- CDN References -->
+    
+    
     <!-- Bootstrap 4 and dependencies -->
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/popper.min.js" type="text/javascript"></script>
@@ -186,6 +150,29 @@
     <!-- Dapp/Game Scripts -->
     <script type="text/javascript" src="assets/js/web3.js"></script>
     <script type="text/javascript" src="assets/js/alertify.js"></script>
-    <script type="text/javascript" src="assets/js/lightwallet.min.js"></script>
-    <script type="text/javascript" src="assets/lib/C3D_Token.etc.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    
+    <!-- DappDirect -->
+    <script src="assets/lib/shared.js"></script>
+    <script src="assets/lib/index.js"></script>
+    <script>
+            function refreshPrice() {
+                $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETC&tsyms=USDT', function (json) {
+                    var USETC = JSON.parse(JSON.stringify(json)).USDT;
+                    var price = (USETC).toFixed(2);
+                    $("#price").text(price)
+                });
+            }
+            setTimeout(function () {
+                refreshPrice()
+            }, 2000);
+            setInterval(function () {
+                refreshPrice() // this will run after every 5 seconds
+            }, 12000);
+    </script>
 </html>
