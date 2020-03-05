@@ -4,11 +4,7 @@ var masternode = getURL(window.location.search.substring(1)).ref;
 
 if (masternode){
     localStorage.setItem("masternode", masternode)
-    $(".dashboard-link").attr("href", "/index.html?masternode=" + localStorage.getItem('masternode'))
-}
-
-if (localStorage.getItem('ref')){
-  if (typeof gtag !== 'undefined'){gtag('event', 'Wallet', {'event_label': 'Usage', 'event_category': 'UsingRefAddress', 'value': localStorage.getItem('ref')});};
+    $(".dashboard-link").attr("href", "/dashboard.html?masternode=" + localStorage.getItem('masternode'))
 }
 
 function getURL(query) {

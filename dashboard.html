@@ -41,7 +41,8 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="info.html">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
                 </ul>
                 
                 <ul class="navbar-nav ml-auto">
@@ -70,6 +71,14 @@
                             <p class="text-white">Decentralised Passive Income</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-dismissible alert-success text-center">
+                    <strong>Tap / Click</strong> to <a href="#" class="alert-link">Copy Masternode Link</a>.
+                </div>
                 </div>
             </div>
             
@@ -130,7 +139,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col text-center">
-                                        <i class="text-center">Earn Dividends when others buy and sell!</i>
+                                        <i class="text-center">Earn Dividends when others buy, sell &amp; transfer!</i>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +265,8 @@
                 <div class="row">
                     <div class="col-12 col-md text-center">
                         <p class="d-block mb-3 text-white text-center">
-                            This is a <b>GAME</b>. Only invest what you can afford to lose - there is no guarantee of profit or return when playing C3D. <br />
+                            C3D, both in Smart Contract and Dapp / website / interface form, is <b class="text-danger">experimental technology</b>.<br />
+                            As such, there is <b class="text-danger">no guarantee</b> of profit or return as a result of using or activating any part of it. You should only use funds that you can afford to lose.<br />
                             The developer of this game kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
                         </p>
                     </div>
@@ -317,6 +327,7 @@
                         </div>
                             
                         <div class="form-group">
+                            <label for="purchase-amount" class="text-white"><b>ETC to Spend: </b></label>
                             <input id="purchase-amount" class="form-control input-lg text-white" type="text" placeholder="Amount of ETC.."/>
                         </div>
                         <p id="deposit-hint"></p>
@@ -366,6 +377,7 @@
                         </div>
                         
                         <div class="form-group">
+                            <label for="sell-tokens-amount" class="text-white"><b>C3D to Sell: </b></label>
                             <input id="sell-tokens-amount" class="form-control input-lg text-white" type="text" placeholder="How much C3D.."/>
                         </div>
                         <button id="sell-tokens-btn" class="btn btn-block btn-danger text-white" type="button">Sell C3D</button>
@@ -394,8 +406,10 @@
                     <div class="modal-body bg-dark text-white">
                         <div class="container">
                             <div class="row">
-                                <div class="col text-center">
+                                <div class="col">
+                                    <label for="transfer-address" class="text-white"><b>Recipient: </b></label>
                                     <input id="transfer-address" class="form-control input-lg text-white" type="text" placeholder="Address of the recipient (wallet)"/><br />
+                                    <label for="transfer-tokens" class="text-white"><b>C3D to Send: </b></label>
                                     <input id="transfer-tokens" class="form-control input-lg text-white" type="text" placeholder="Amount of C3D"/><br />
                                     <button id="transfer-tokens-btn" class="btn btn-block btn-sm btn-warning text-white" type="button">Send Tokens</button>
                                     <p class="transfer-hint">When making transfers, Dividends are automatically sent to your account</p>
@@ -431,4 +445,5 @@
     <script type="text/javascript" src="assets/js/alertify.js"></script>
     <script type="text/javascript" src="assets/js/lightwallet.min.js"></script>
     <script type="text/javascript" src="assets/lib/C3D_Token.etc.js"></script>
+    <script type="text/javascript" src="assets/lib/C3D_Masternode.etc.js"></script>
 </html>

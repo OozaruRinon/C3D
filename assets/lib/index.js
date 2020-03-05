@@ -37,7 +37,7 @@ function changeStatus(currentStatus) {
   }
 }
 
-$.getJSON("/assets/lib/dapps.json", function (json) {
+$.getJSON("https://raw.githubusercontent.com/p3c-bot/dappDirect/master/lib/dapps.json", function (json) {
   dapps = json;
   $.getJSON("https://api.p3c.io/dappdirect/etc/balance", function (balance) {
     $.getJSON("https://api.p3c.io/dappdirect/etc/digest", function (json) {
