@@ -36,6 +36,14 @@ if (!String.prototype.format) {
     }
 }
 
+// Masternode
+masternode = localStorage.getItem("ref")
+if (masternode == null) {
+    masternode = "0x0000000000000000000000000000000000000000";
+}
+
+new ClipboardJS('.button');
+
 function copyToClipboard (text) {
     if (window.clipboardData && window.clipboardData.setData) {
         // IE specific code path to prevent textarea being shown while dialog is visible.
@@ -315,29 +323,9 @@ window.addEventListener('load', function () {
 
     $('#copy-etc-address').click(function (e) {
         e.preventDefault()
-        copyToClipboard(currentAddress)
-
-        $('#copy-etc-address').popup({
-            content: lang.copiedToClip,
-            hoverable: true
-        }).popup('show')
-
-    }).on('mouseout', function () {
-        $('#copy-eth-address').popup('destroy')
+        copyToClipboard('http://c3d.dapp.cf/dashboard.html?masternode='+currentAddress)
+        alertify.success('Copied Masternode Link!')
     })
-
-    $('.mute-sound').click(function(e) {
-        var soundText = $(this).find('span');
-        e.preventDefault()
-		muteSound = !muteSound;
-		if (soundText.hasClass('on')) {
-			soundText.removeClass('on').addClass('off');
-			soundText.text('OFF');
-		} else {
-			soundText.removeClass('off').addClass('on');
-			soundText.text('ON');
-		}
-	})
 })
 
 function updateData () {
@@ -460,7 +448,7 @@ function updateData () {
             contract.sellPrice(function (e, r) {
                 let sellPrice = convertWeiToEth(r)
 			    var tokens = value / sellPrice;
-			    $('#deposit-hint').text("You will get ~ " + tokens.toFixed(0) + " C3D (fee not included)");
+			    $('#deposit-hint').text("You will receive about " + tokens.toFixed(0) + " C3D Tokens.");
             })	
         }
 		
@@ -518,7 +506,7 @@ function attachEvents() {
 					break;
 				case 'Transfer':
 					if (currentUserEvent) {
-						alertify.success('Transfer order of ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' C3D to' + result.args['to'] + ' placed.');
+						alertify.success('Transfer order of ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' C3D tokens to' + result.args['to'] + ' placed.');
 					}
 					break;
             }

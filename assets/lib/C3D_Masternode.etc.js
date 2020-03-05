@@ -4,7 +4,7 @@ var masternode = getURL(window.location.search.substring(1)).ref;
 
 if (masternode){
     localStorage.setItem("masternode", masternode)
-    $(".dashboard-link").attr("href", "/dashboard.html?masternode=" + localStorage.getItem('masternode'))
+    $(".copy-etc-address").attr("href", "http://c3d.dapp.cf/dashboard.html?masternode=" + localStorage.getItem('masternode'))
 }
 
 function getURL(query) {
