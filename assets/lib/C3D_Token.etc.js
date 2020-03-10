@@ -393,7 +393,7 @@ function updateData () {
             let div = convertWeiToEth(r).toFixed(6)
 
             $('.div').text(div)
-            $('input.div').val(div + " ETH")
+            $('input.div').val(div + " ETC")
             $('.div-usd').text(Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString())
 
             if (dividendValue != div) {
@@ -405,7 +405,7 @@ function updateData () {
 
         web3js.eth.getBalance(currentAddress, function (e, r) {
             // We only want to show six DP in a wallet, consistent with MetaMask
-            $('.address-balance').text(convertWeiToEth(r).toFixed(6) + ' ETH')
+            $('.address-balance').text(convertWeiToEth(r).toFixed(6) + ' ETC')
         })
     } else {
         $('#meta-mask-ui').addClass('logged-out').removeClass('logged-in')
@@ -449,7 +449,28 @@ function updateData () {
             contract.sellPrice(function (e, r) {
                 let sellPrice = convertWeiToEth(r)
 			    var tokens = value / sellPrice;
-			    $('#deposit-hint').text("You will receive about " + tokens.toFixed(0) + " C3D Tokens.");
+			    $('#deposit-hint').text("You will receive about " + tokens.toFixed(0) + " C3D");
+            })	
+        }
+		
+    })
+    
+    $('#sell-tokens-amount').on('input change', function() {
+        var value = parseFloat($(this).val()) * 0.65;
+        var tokenPriceInitial_ = 0.0000001;
+    	var tokenPriceIncremental_ = 0.00000001;
+		
+
+		if ( value === 0 || Number.isNaN(value) ) {
+			$('#withdraw-hint').text("");
+			return;
+		}
+
+		if ( value > 0) {
+            contract.buyPrice(function (e, r) {
+                let buyPrice = convertWeiToEth(r)
+			    var tokens = value * buyPrice;
+			    $('#withdraw-hint').text("You will receive about " + tokens.toFixed(2) + " ETC");
             })	
         }
 		
