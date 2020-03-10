@@ -1,5 +1,8 @@
 // CONSTANTS
 var contractAddress = '0x2EB1D7785469FC5d478E59Ca09F66CBb9170C519'; // C3D
+// var contractAddress = '0xc2Dc5e825fAEB9Bd274B61A2993f4f8949Af4A21'; // BlackPerl ETC
+// var contractAddress = '0x08f7039d36f99eedC3d8B02CbD19F854f7dddc4d'; // Proof Of Community
+// var contractAddress = '0xDF9AaC76b722B08511A4C561607A9bf3AfA62E49'; // P3C (PoWH3C)
 
 // GLOBALS
 var web3Mode = null;
@@ -168,7 +171,7 @@ window.addEventListener('load', function () {
         if (walletMode === 'metamask') {
             var etcwei = convertEthToWei(amount) ;
             var gasvalue = 150000;
-            contract.buy("0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD" , {value: etcwei},function (e,r){console.log(e, r)})
+            contract.buy(ref , {value: etcwei},function (e,r){console.log(e, r)})
         } else if (walletMode === 'web') {
             call(address, 'buy', [], convertEthToWei(amount))
         }

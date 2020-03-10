@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="assets/css/scrollFix.css" />
         <link rel="stylesheet" href="assets/css/c3d_style.css" />
         <link rel="stylesheet" href="assets/css/themes/default.min.css" />
-        
-        <link href="https://bootswatch.com/4/materia/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
         <script src="assets/js/modernizr.min.js"></script>
@@ -29,10 +28,10 @@
         </script>
     </head>
     
-    <body class="is-preload bg-dark">
+    <body class="is-preload wallpaper3">
         <div id="particles-js"></div>
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 1);">
             <a class="navbar-brand" href="index.html"><img src="./assets/img/coinsmall.png" width="30px" height="30px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,6 +41,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sacrifice.html">SacrifiC3D</a></li>
                 </ul>
                 
                 <ul class="navbar-nav ml-auto">
@@ -59,11 +59,11 @@
         <br />
         
         <div class="container">
-            <div class="row jumbotron border-white text-white animated fadeInDown" style="background: rgba(0, 0, 0, 0.65);">
+            <div class="row jumbotron text-white animated fadeInDown" style="background: rgba(0, 0, 0, 0.65);">
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h3 class="text-white">C3D Interface</h3>
+                            <h3 class="text-white">C3D Token</h3>
                         </div>
                     </div>
                     
@@ -88,18 +88,18 @@
             
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card border-danger">
+                    <div class="card border-white">
                         <div class="card-header bg-dark text-white">C3D Help</div>
                         <div class="card-body bg-dark text-white text-center">
                             <p class="text-white text-left">
                                 <b class="text-white">Welcome</b><br />
-                                C3D is a Token, an Exchange and a Platform, designed to benefit holders only, from everyday use and growth. By holding C3D Tokens you automatically earn Dividends, which are paid for by the fees collected on purchase, sale and transfer of the token.<br />
+                                C3D is a Token, an Exchange and a Platform, designed to benefit holders, from everyday use and growth. By holding C3D Tokens you automatically earn Dividends, which are paid for by the fees collected on purchase, sale and transfer of the token. These tokens can and will be used in games, Dapps, development and store of value applications.<br />
                                 <br />
                             </p>
                                     
                             <p class="text-white text-left">
                                 <b class="text-white">Dividends and Fees</b><br />
-                                On every purchase, sale and transfer of C3D tokens, there is a 10% fee charged to the transactor - This fee is distributed among all other holders of C3D tokens, as &quot;Dividends&quot;. As more people and businesses use the Smart Contract and ecosystem, these fees will begin to make up somewhat of a &quot;Universal Basic Income&quot;.
+                                On every <span class="text-info">Transfer</span>, <span class="text-warning">Trade</span>, <span class="text-success">Buy</span> or <span class="text-danger">Sell</span> of C3D tokens, there is a 10% fee charged to the transactor - This fee is distributed among all other holders of C3D tokens, as &quot;Dividends&quot;. As more people and businesses use the Smart Contract and ecosystem, these fees will begin to make up somewhat of a &quot;Universal Basic Income&quot;.
                             </p>
                         </div>
                     </div>
@@ -108,35 +108,35 @@
                 
                 <div class="col-md-6">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white border-white" data-toggle="modal" data-target="#helpModal1">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white" data-toggle="modal" data-target="#helpModal1">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">1. Get a Wallet and some ETC</h5>
                             </div>
                             <p class="mb-1">You&apos;ll need these two things to get started with C3D</p>
                         </a>
                         
-                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white border-white" data-toggle="modal" data-target="#helpModal2">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white" data-toggle="modal" data-target="#helpModal2">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">2. Buy C3D Tokens</h5>
                             </div>
                             <p class="mb-1">You have several options of how to do this! Buy lots, please!</p>
                         </a>
                         
-                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white border-white" data-toggle="modal" data-target="#helpModal3">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white" data-toggle="modal" data-target="#helpModal3">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">3. Compound your Dividends</h5>
                             </div>
                             <p class="mb-1">This is how you earn more Dividends faster - read on...</p>
                         </a>
                         
-                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white border-white" data-toggle="modal" data-target="#helpModal4">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white" data-toggle="modal" data-target="#helpModal4">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">4. Sell C3D Tokens</h5>
                             </div>
                             <p class="mb-1">Are you sure? Like, really sure? Is now the right time?</p>
                         </a>
                         
-                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white border-white" data-toggle="modal" data-target="#helpModal5">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-dark text-white" data-toggle="modal" data-target="#helpModal5">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">5. Withdraw ETC</h5>
                             </div>
@@ -154,7 +154,7 @@
                         <p class="d-block mb-3 text-white text-center">
                             C3D, both in Smart Contract and Dapp / website / interface form, is <b class="text-danger">experimental technology</b>.<br />
                             As such, there is <b class="text-danger">no guarantee</b> of profit or return as a result of using or activating any part of it. You should only use funds that you can afford to lose.<br />
-                            The developer of this game kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
+                            The developer kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
                         </p>
                     </div>
                 </div>
@@ -264,8 +264,7 @@
                     <div class="modal-body">
                         <div class="container">
                             <ol>
-                                <li>Navigate to the C3D Dashboard, and click <span class="text-success">&quot;Buy&quot;</span> in the 'My Wallet' panel.</li>
-                                <li>Enter an amount of ETC to spend on C3D Tokens. When you enter a number, an estimate of how many tokens you&apos;ll receive will appear below the entry field. Please note, this is without fees taken into consideration.</li>
+                                <li>Navigate to the C3D Dashboard, and enter an amount of ETC to spend on C3D Tokens. When you enter a number, an estimate of how many tokens you&apos;ll receive will appear below the entry field. Please note, this is without fees taken into consideration.</li>
                                 <li>Click the <span class="text-success">&quot;Buy&quot;</span> button in the window, and approve the transaction from your Wallet.</li>
                             </ol>
                         </div>
@@ -294,9 +293,9 @@
                     <div class="modal-body">
                         <div class="container">
                             <ol>
-                                <li>1. Navigate to the C3D Dashboard, and look at your Dividends (next to &quot;My Wallet&quot; on a computer, beneath it on mobile.</li>
-                                <li>2. Click <span class="text-success">&quot;Buy&quot;</span> in the 'My Wallet' panel, and look at the price of 1 C3D Token. If you have more Dividends than it costs to buy a token, this is a good time to Compound.</li>
-                                <li>3. Click &quot;Close&quot; on the buy prompt, and tap <span class="text-warning">&quot;Reinvest&quot;</span>, and confirm the Transaction in your wallet.</li>
+                                <li>1. Navigate to the C3D Dashboard, and look at your Dividends (next to &quot;My Wallet&quot; on a computer, beneath it on mobile).</li>
+                                <li>2. Look at the <span class="text-success">Buy Price</span> of 1 C3D Token. If you have more Dividends than it costs to buy a token, this is a good time to Compound.</li>
+                                <li>3. Tap <span class="text-warning">&quot;Reinvest&quot;</span>, and confirm the Transaction in your wallet.</li>
                             </ol>
                         </div>
                     </div>
@@ -324,8 +323,7 @@
                     <div class="modal-body">
                         <div class="container">
                             <ol>
-                                <li>Navigate to the C3D Dashboard, and click <span class="text-danger">&quot;Sell&quot;</span> in the 'My Wallet' panel.</li>
-                                <li>Enter an amount of C3D tokens to sell for ETC. When you enter a number, an estimate of how much ETC you&apos;ll receive will appear below the entry field. Please note, this is without fees taken into consideration.</li>
+                                <li>Navigate to the C3D Dashboard, and enter an amount of C3D tokens to sell for ETC. When you enter a number, an estimate of how much ETC you&apos;ll receive will appear below the entry field. Please note, this is without fees taken into consideration.</li>
                                 <li>Click the <span class="text-danger">&quot;Sell&quot;</span> button in the window, and approve the transaction from your Wallet.</li>
                             </ol>
                         </div>

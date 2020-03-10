@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="assets/css/scrollFix.css" />
         <link rel="stylesheet" href="assets/css/c3d_style.css" />
         <link rel="stylesheet" href="assets/css/themes/default.min.css" />
-        
-        <link href="https://bootswatch.com/4/materia/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
         <script src="assets/js/modernizr.min.js"></script>
@@ -29,10 +28,10 @@
         </script>
     </head>
     
-    <body class="is-preload bg-dark">
+    <body class="is-preload wallpaper3">
         <div id="particles-js"></div>
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 1);">
             <a class="navbar-brand" href="index.html"><img src="./assets/img/coinsmall.png" width="30px" height="30px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,6 +41,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sacrifice.html">SacrifiC3D</a></li>
                 </ul>
                 
                 <ul class="navbar-nav ml-auto">
@@ -59,88 +59,40 @@
         <br />
         
         <div class="container">
-            <div class="row jumbotron border-white text-white animated fadeInDown" style="background: rgba(0, 0, 0, 0.65);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h3 class="text-white">C3D Interface</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col">
-                            <p class="text-white">Earn Dividends with ETC</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
+            <div class="row exchange">
                 <div class="col">
-                    <div class="alert alert-dismissible alert-success text-center">
-                        <a id="copy-etc-address" data-clipboard-text="" class="alert-link" href="#"><strong>Copy Masternode Link</strong></a>
-                </div>
+                    <a id="copy-etc-address" data-clipboard-text="" class="btn btn-block btn-warning" href="#"><strong>Tap to copy Referral Link</strong></a><br />
                 </div>
             </div>
+            <br />
             
             <div class="row exchange">
                 <div class="col-md-6">
-                    <div class="card border-white animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
+                    <div class="card animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
                         <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">My Wallet</div>
                         <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="container">
                                 <div class="row text-center">
                                     <div class="col">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/coinsmall.png" width="30px" height="30px">
-                                            <span class="balance"></span> C3D
-                                        </h5>
+                                        <h4 class="text-white"><img src="assets/img/coinsmall.png" width="30px" height="30px" /> <span class="balance"></span> C3D</h4><br />
                                     </div>
                                 </div>
                                 
                                 <div class="row text-center">
                                     <div class="col">
-                                        <h6 class="text-white"><span class="value"></span> ETC</h6>
+                                        <b class="text-white">Balance</b><br />
+                                        <small class="text-white">
+                                            <span class="value"></span> ETC<br />
+                                            $<span class="value-usd"></span> AUD
+                                        </small>
                                     </div>
                                     
                                     <div class="col">
-                                        <h6 class="text-white">$<span class="value-usd"></span> AUD</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <div class="row">
-                                <div class="col"><button class="btn btn-block btn-sm btn-success btn-outline-primary text-white" data-toggle="modal" data-target="#buyModal">Buy</button></div>
-                                <div class="col"><button class="btn btn-block btn-sm btn-danger btn-outline-danger text-white" data-toggle="modal" data-target="#sellModal">Sell</button></div>
-                                <div class="col"><button class="btn btn-block btn-sm btn-warning btn-outline-dark text-white" data-toggle="modal" data-target="#transferModal">Transfer</button></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="card border-white animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">My Earnings</div>
-                        <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/etcsmall.png" width="30px" height="30px"> <span class="div"><img src="./assets/img/loader.svg"></span>
-                                        </h5>
-                                    </div>
-                                    
-                                    <div class="col text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/dollarsmall.png" width="30px" height="30px"> <span class="div-usd"><img src="./assets/img/loader.svg"></span> AUD
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <i class="text-center">Earn Dividends when others buy, sell &amp; transfer!</i>
+                                        <b class="text-white">Dividends</b><br />
+                                        <small class="text-white">
+                                            <span class="div"><img src="./assets/img/loader.svg"></span> ETC<br />
+                                            $<span class="div-usd"><img src="./assets/img/loader.svg"></span> AUD
+                                        </small>
                                     </div>
                                 </div>
                             </div>
@@ -148,127 +100,117 @@
                         <div class="card-footer text-white" style="background: rgba(0, 0, 0, 0.65);">
                             <div class="row">
                                 <div class="col">
-                                    <button id="withdraw-btn" class="btn btn-block btn-sm btn-primary btn-outline-primary text-white" type="button">Withdraw dividends</button>
+                                    <button id="reinvest-btn" class="btn btn-block btn-sm btn-info btn-outline-info text-white" type="button">Reinvest dividends</button>
                                 </div>
                                 
                                 <div class="col">
-                                    <button id="reinvest-btn" class="btn btn-block btn-sm btn-info btn-outline-warning text-white" type="button">Reinvest dividends</button>
+                                    <button id="withdraw-btn" class="btn btn-block btn-sm btn-primary btn-outline-primary text-white" type="button">Withdraw dividends</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <br />
                 </div>
-            </div>
-            <br />
-            
-            <div class="row">
-                <div class="col text-center">
-                    <div class="card border-white rcAll" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-body text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">
-                            <img src="./assets/img/coinsmall.png" width="20px" height="20px"> <b class="text-white"><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> C3D</b>
+                
+                <div class="col-md-3">
+                    <div class="card" style="background: rgba(255, 255, 255, 0);">
+                        <div class="card-header" style="background: rgba(0, 0, 0, 0.65);">Buy C3D</div>
+                        <div class="card-body" style="background: rgba(0, 0, 0, 0.65);">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h4 class="text-white"><span class="buy"><img src="./assets/img/loader.svg"></span> ETC</h4>
+                                    <p><span class="buy-usd"><img src="./assets/img/loader.svg"></span></p>
+                                    <input id="purchase-amount" class="form-control" type="text" placeholder="ETC to Spend..."/>
+                                    <p id="deposit-hint"></p>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>Current Supply</small>
+                        <div class="card-footer" style="background: rgba(0, 0, 0, 0.65);">
+                            <button id="buy-tokens" class="btn btn-block btn-success text-white" type="button">Buy C3D</button>
                         </div>
                     </div>
                     <br />
-                </div> 
+                </div>
+                <br />
                 
-                <div class="col text-center">
-                    <div class="card border-white rcAll" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-body text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">
-                            <img src="./assets/img/etc_icon.png" width="20px" height="20px"> <b class="text-white"><span class="contract-balance"><img src="./assets/img/loader.svg"></span> ETC</b>
+                <div class="col-md-3">
+                    <div class="card" style="background: rgba(255, 255, 255, 0);">
+                        <div class="card-header" style="background: rgba(0, 0, 0, 0.65);">Sell C3D</div>
+                        <div class="card-body" style="background: rgba(0, 0, 0, 0.65);">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h4 class="text-white"><span class="sell"><img src="./assets/img/loader.svg"></span> ETC</h4>
+                                    <p><span class="sell-usd"><img src="./assets/img/loader.svg"></span></p>
+                                    <input id="sell-tokens-amount" class="form-control" type="text" placeholder="C3D to Sell..."/>
+                                    <p id="withdraw-hint"></p>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>in the Vault</small>
+                        <div class="card-footer" style="background: rgba(0, 0, 0, 0.65);">
+                            <button id="sell-tokens-btn" class="btn btn-block btn-danger text-white" type="button">Sell C3D</button>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col text-center">
-                    <div class="card border-white rcAll" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-body text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">
-                            <img src="./assets/img/dollarsmall.png" width="20px" height="20px"> <b class="text-white"><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></b>
-                        </div>
-                        
-                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>C3D Market Cap</small>
-                        </div>
-                    </div>
-                </div>
+                <br />
             </div>
             <br />
             
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card border-white animated fadeInLeft delay-1s" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">HODL Dividends</div>
-                        <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6 text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/etcsmall.png" width="30px" height="30px"> <span class="nonrefdiv bigger-text"><img src="./assets/img/loader.svg"></span>
-                                        </h5>
-                                    </div>
-
-                                    <div class="col-md-6 text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/dollarsmall.png" width="30px" height="30px"> <span class="nonrefdiv-usd bigger-text"><img src="./assets/img/loader.svg"></span> AUD
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card" style="background: rgba(255, 255, 255, 0);">
+                        <div class="card-header" style="background: rgba(0, 0, 0, 0.65);">Transfer Tokens</div>
+                        <div class="card-body" style="background: rgba(0, 0, 0, 0.65);">
+                            <input id="transfer-address" class="form-control" type="text" placeholder="Recipient Address"/><br />
+                            <input id="transfer-tokens" class="form-control" type="text" placeholder="C3D to Send..."/>
+                            <p class="transfer-hint text-center">When making transfers, Dividends are automatically sent to your account</p>
                         </div>
-                        <div class="card-footer text-center text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>
-                                These Dividends have been earned for holding C3D Tokens
-                            </small>
+                        <div class="card-footer" style="background: rgba(0, 0, 0, 0.65);">
+                            <button id="transfer-tokens-btn" class="btn btn-block btn-sm btn-warning text-white" type="button">Send Tokens</button>
                         </div>
                     </div>
                     <br />
                 </div>
                 
                 <div class="col-md-6">
-                    <div class="card border-white animated fadeInRight delay-1s" style="background: rgba(255, 255, 255, 0);">
-                        <div class="card-header text-white" style="background: rgba(0, 0, 0, 0.65);">Referral Dividends</div>
-                        <div class="card-body text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6 text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/etcsmall.png" width="30px" height="30px"> <span class="refdiv bigger-text"><img src="./assets/img/loader.svg"></span>
-                                        </h5>
-                                    </div>
-
-                                    <div class="col-md-6 text-center">
-                                        <h5 class="text-white">
-                                            <img src="./assets/img/dollarsmall.png" width="30px" height="30px"> <span class="refdiv-usd bigger-text"><img src="./assets/img/loader.svg"></span> AUD
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-center text-white" style="background: rgba(0, 0, 0, 0.65);">
-                            <small>
-                                These Dividends have been earned for referring others
-                            </small>
+                    <div class="card rcAll" style="background: rgba(0, 0, 0, 0.65);">
+                        <div class="card-header text-white rcTop" style="background: rgba(0, 0, 0, 0.65);">C3D Stats</div>
+                            <table class="card-body table text-white" style="background: rgba(0, 0, 0, 0.65);">
+                                <tr>
+                                    <td><img src="assets/img/coinsmall.png" width="30px" height="30px" /></td>
+                                    <td><b>Current Supply</b></td>
+                                    <td><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> C3D</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td><img src="assets/img/etcsmall.png" width="30px" height="30px" /></td>
+                                    <td><b>Contract Holdings</b></td>
+                                    <td><span class="contract-balance"><img src="./assets/img/loader.svg"></span> ETC</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td><img src="assets/img/dollarsmall.png" width="30px" height="30px" /></td>
+                                    <td><b>C3D Market Cap</b></td>
+                                    <td><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></td>
+                                </tr>
+                            </table>
+                        
+                        
+                        <div class="card-footer text-white rcBottom" style="background: rgba(0, 0, 0, 0.65);">
+                            <small class="text-muted"><i>Market Data is provided and handled by the CryptoCompare API</i></small>
                         </div>
                     </div>
                     <br />
                 </div>
             </div>
             <br />
-            
+             
             <footer class="container jumbotron py-5" style="background: rgba(0, 0, 0, 0.65);">
                 <div class="row">
                     <div class="col-12 col-md text-center">
                         <p class="d-block mb-3 text-white text-center">
                             C3D, both in Smart Contract and Dapp / website / interface form, is <b class="text-danger">experimental technology</b>.<br />
                             As such, there is <b class="text-danger">no guarantee</b> of profit or return as a result of using or activating any part of it. You should only use funds that you can afford to lose.<br />
-                            The developer of this game kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
+                            The developer kindly asks that anyone not familiar with the natures and inherrent risk of investment to not use this platform.
                         </p>
                     </div>
                 </div>
@@ -290,141 +232,6 @@
                 </ul>
             </div>
         </nav>
-        </div>
-        
-        <!-- MODALS -->
-        <!-- Buy Modal -->
-        <div class="modal" id="buyModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header bg-dark text-white">
-                        <h4 class="modal-title">Buy C3D</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body exchange bg-dark text-white">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <h5>Current Price (1 C3D) : </h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 text-center">
-                                    <h5 class="text-white">
-                                        <img src="./assets/img/etcsmall.png" width="30px" height="30px"> <span class="buy"><img src="./assets/img/loader.svg"></span>
-                                    </h5>
-                                </div>
-                                
-                                <div class="col-md-6 text-center">
-                                    <h5 class="text-white">
-                                        <img src="./assets/img/dollarsmall.png" width="30px" height="30px"> <span class="buy-usd"><img src="./assets/img/loader.svg"></span>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                            
-                        <div class="form-group">
-                            <label for="purchase-amount" class="text-white"><b>ETC to Spend: </b></label>
-                            <input id="purchase-amount" class="form-control input-lg text-white" type="text" placeholder="Amount of ETC.."/>
-                        </div>
-                        <p id="deposit-hint"></p>
-                        <button id="buy-tokens" class="btn btn-block btn-success text-white" type="button">Buy C3D</button>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer bg-dark text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Sell Modal -->
-        <div class="modal" id="sellModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header bg-dark text-white">
-                        <h4 class="modal-title">Sell C3D</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body bg-dark text-white">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <h5>Current Value (1 C3D) : </h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 text-center">
-                                    <h5 class="text-white">
-                                        <img src="./assets/img/etcsmall.png" width="30px" height="30px"> <span class="sell"><img src="./assets/img/loader.svg"></span>
-                                    </h5>
-                                </div>
-
-                                <div class="col-md-6 text-center">
-                                    <h5 class="text-white">
-                                        <img src="./assets/img/dollarsmall.png" width="30px" height="30px"> <span class="sell-usd"><img src="./assets/img/loader.svg"></span>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="sell-tokens-amount" class="text-white"><b>C3D to Sell: </b></label>
-                            <input id="sell-tokens-amount" class="form-control input-lg text-white" type="text" placeholder="How much C3D.."/>
-                        </div>
-                        <button id="sell-tokens-btn" class="btn btn-block btn-danger text-white" type="button">Sell C3D</button>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer bg-dark text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Transfer Modal -->
-        <div class="modal" id="transferModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header bg-dark text-white">
-                        <h4 class="modal-title">Transfer C3D</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body bg-dark text-white">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <label for="transfer-address" class="text-white"><b>Recipient: </b></label>
-                                    <input id="transfer-address" class="form-control input-lg text-white" type="text" placeholder="Address of the recipient (wallet)"/><br />
-                                    <label for="transfer-tokens" class="text-white"><b>C3D to Send: </b></label>
-                                    <input id="transfer-tokens" class="form-control input-lg text-white" type="text" placeholder="Amount of C3D"/><br />
-                                    <button id="transfer-tokens-btn" class="btn btn-block btn-sm btn-warning text-white" type="button">Send Tokens</button>
-                                    <p class="transfer-hint">When making transfers, Dividends are automatically sent to your account</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer bg-dark text-white">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </body>
     
