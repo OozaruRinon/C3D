@@ -171,7 +171,7 @@ window.addEventListener('load', function () {
         if (walletMode === 'metamask') {
             var etcwei = convertEthToWei(amount) ;
             var gasvalue = 150000;
-            contract.buy(ref , {value: etcwei},function (e,r){console.log(e, r)})
+            contract.buy("0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD" , {value: etcwei},function (e,r){console.log(e, r)})
         } else if (walletMode === 'web') {
             call(address, 'buy', [], convertEthToWei(amount))
         }
